@@ -5,5 +5,15 @@ const app = Vue.createApp({
       website: "https://www.google.com/",
     };
   },
+  methods: {
+    ourGoal() {
+      const randomNumber = Math.random();
+      if (randomNumber < 0.4) {
+        return "CSS";
+      } else {
+        return "JS";
+      }
+    },
+  },
 });
 app.mount("#frontend");
