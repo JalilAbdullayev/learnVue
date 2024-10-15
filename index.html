@@ -14,8 +14,10 @@
     <section id="frontend">
       <h2>Roadmap</h2>
       <p>{{firstGoal}}</p>
+      <p v-html="secondGoal"></p>
       <a v-bind:href="website">Website</a>
-      <p>{{ourGoal()}}</p>
+      <!-- <p>{{ourGoal()}}</p> -->
+      <p v-html="ourGoal()"></p>
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>

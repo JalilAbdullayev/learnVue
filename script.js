@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       firstGoal: "HTML",
-      secondGoal: "CSS",
+      secondGoal: "<h3>CSS</h3>",
       thirdGoal: "JS",
       website: "https://www.google.com/",
     };
