@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            display: block;
+            width: 200px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h4>
+        Name: {{ name }}
+    </h4>
+    <p>
+        Age: {{ age }}
+    </p>
+    <img :src="image" alt=""/>
+    <input type="text" :value="name"/>
+</main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                name: 'Jalil',
+                age: 24,
+                image: 'https://plus.unsplash.com/premium_photo-1685086785636-2a1a0e5b591f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            };
+        }
+    }).mount('main');
+</script>
+</body>
+</html>
