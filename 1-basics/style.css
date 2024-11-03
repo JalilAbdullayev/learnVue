@@ -33,4 +33,14 @@ header {
         border-radius: 25px;
         font-weight: bold;
     }
+
+    button {
+        background-color: darkmagenta;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
 }

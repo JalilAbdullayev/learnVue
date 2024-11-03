@@ -17,17 +17,17 @@
 </header>
 <section id="frontend">
     <h2>
-        Roadmap
+        Event Binding
     </h2>
+    <button @click="counter++">
+        Increment
+    </button>
+    <button @click="counter--">
+        Decrement
+    </button>
     <p>
-        {{ firstGoal }}
+        Result: {{ counter }}
     </p>
-    <p v-html="secondGoal"></p>
-    <a v-bind:href="website">
-        Website
-    </a>
-    <!-- <p>{{ourGoal()}}</p> -->
-    <p v-html="ourGoal()"></p>
 </section>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="script.js"></script>
