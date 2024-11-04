@@ -32,11 +32,12 @@
         Result: {{ counter }}
     </p>
     <input type="text" v-model="name"/>
+    <input type="text" v-model="lastName"/>
     <button @click="reset">
         Reset
     </button>
     <p>
-        Your name: {{ fullName }}
+        Your name: {{ fullNameComputed }}
     </p>
     <form @submit.prevent="login">
         <input type="text"/>
