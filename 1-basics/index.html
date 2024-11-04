@@ -32,6 +32,12 @@
     <p>
         Your name: {{ name }}
     </p>
+    <form @submit.prevent="login">
+        <input type="text"/>
+        <button>
+            Log in
+        </button>
+    </form>
 </section>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="script.js"></script>

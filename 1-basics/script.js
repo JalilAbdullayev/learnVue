@@ -14,6 +14,9 @@ Vue.createApp({
         },
         setName(event, lastName) {
             this.name = event.target.value + ' ' + lastName;
+        },
+        login() {
+            alert("You're logged in!");
         }
     }
 }).mount("#frontend");
