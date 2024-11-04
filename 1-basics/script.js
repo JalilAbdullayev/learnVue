@@ -21,5 +21,14 @@ Vue.createApp({
         reset() {
             this.name = '';
         }
+    },
+    computed: {
+        fullName() {
+            console.log('It works!');
+            if(this.name === '') {
+                return '';
+            }
+            return this.name + ' ' + 'Abdullayev';
+        }
     }
 }).mount("#frontend");
