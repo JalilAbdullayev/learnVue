@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Exercise 2
+    </title>
+</head>
+<body>
+<main>
+    <button @click="increment(10)">
+        +10
+    </button>
+    <button @click="decrement(5)">
+        -5
+    </button>
+    <p>
+        Number: {{ count }}
+    </p>
+    <p>
+        Result: {{ result }}
+    </p>
+</main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                count: 0
+            };
+        },
+        methods: {
+            increment(number) {
+                this.count = this.count + number;
+            },
+            decrement(number) {
+                this.count = this.count - number;
+            }
+        },
+        computed: {
+            result() {
+                if(this.count < 25) {
+                    return "You're below 25!";
+                } else if(this.count > 25) {
+                    return "You're above 25!";
+                } else {
+                    return "You're exactly 25!";
+                }
+            }
+        }
+    }).mount('main');
+</script>
+</body>
+</html>
