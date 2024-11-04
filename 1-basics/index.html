@@ -31,7 +31,10 @@
     <p>
         Result: {{ counter }}
     </p>
-    <input type="text" @input="setName($event, 'Abdullayev')"/>
+    <input type="text" v-model="name"/>
+    <button @click="reset">
+        Reset
+    </button>
     <p>
         Your name: {{ name }}
     </p>

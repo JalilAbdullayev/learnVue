@@ -12,11 +12,14 @@ Vue.createApp({
         decrement(number) {
             this.counter -= number;
         },
-        setName(event, lastName) {
-            this.name = event.target.value + ' ' + lastName;
+        setName(event) {
+            this.name = event.target.value;
         },
         login() {
             alert("You're logged in!");
+        },
+        reset() {
+            this.name = '';
         }
     }
 }).mount("#frontend");
