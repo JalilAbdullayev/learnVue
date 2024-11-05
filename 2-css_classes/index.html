@@ -21,7 +21,7 @@
         Dynamic Styling
     </h2>
     <div class="box" @click="chooseBox(1)" :class="boxOneSelected"></div>
-    <div class="box" @click="chooseBox(2)" :class="{selected: secondBox}"></div>
+    <div @click="chooseBox(2)" :class="['box', {selected: secondBox}]"></div>
     <div class="box" @click="chooseBox(3)" :class="{selected: secondBox}"></div>
 </main>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
