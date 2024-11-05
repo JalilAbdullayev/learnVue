@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        CSS Classes
+    </title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+    <h1>
+        CSS Classes
+    </h1>
+</header>
+<main>
+    <h2>
+        Dynamic Styling
+    </h2>
+    <div class="box" @click="chooseBox(1)" :style="{borderColor: firstBox ? 'darkmagenta': ''}"></div>
+    <div class="box" @click="chooseBox(2)" :style="{borderColor: secondBox ? 'darkmagenta': ''}"></div>
+    <div class="box" @click="chooseBox(3)" :style="{borderColor: thirdBox ? 'darkmagenta': ''}"></div>
+</main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
