@@ -35,3 +35,7 @@ main {
         margin: 30px 0;
     }
 }
+
+.selected {
+    border-color: darkmagenta !important;
+}
