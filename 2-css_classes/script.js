@@ -6,6 +6,11 @@ Vue.createApp({
             thirdBox: false
         };
     },
+    computed: {
+        boxOneSelected() {
+            return {selected: this.firstBox};
+        }
+    },
     methods: {
         chooseBox(number) {
             if(number === 1) {
