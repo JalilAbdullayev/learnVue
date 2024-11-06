@@ -17,16 +17,16 @@
     </h1>
 </header>
 <main>
-    <form>
-        <input type="text"/>
-        <button>
+    <form @submit.prevent>
+        <input type="text" v-model="skill"/>
+        <button @click="addSkill">
             Add
         </button>
     </form>
     <p v-if="skills.length === 0">
         You didn't add anything!
     </p>
-    <ul>
+    <ul v-else-if="skills.length > 0">
         <li>
             HTML
         </li>
@@ -34,6 +34,9 @@
             CSS
         </li>
     </ul>
+    <p v-else>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, doloribus.
+    </p>
 </main>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="script.js"></script>

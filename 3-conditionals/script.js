@@ -1,7 +1,14 @@
 Vue.createApp({
     data() {
         return {
-            skills: ['HTML', 'CSS']
+            skills: [],
+            skill: ''
         };
+    },
+    methods: {
+        addSkill() {
+            this.skills.push(this.skill);
+            this.skill = '';
+        }
     }
 }).mount('main');
