@@ -27,11 +27,8 @@
         You didn't add anything!
     </p>
     <ul v-else-if="skills.length > 0">
-        <li>
-            HTML
-        </li>
-        <li>
-            CSS
+        <li v-for="(skill, index) in skills">
+            {{ index + 1 }}. {{ skill }}
         </li>
     </ul>
     <p v-else>
