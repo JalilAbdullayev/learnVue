@@ -27,7 +27,7 @@
         You didn't add anything!
     </p>
     <ul v-else-if="skills.length > 0">
-        <li v-for="(skill, index) in skills" @click="deleteSkill(index)">
+        <li v-for="(skill, index) in skills" :key="index" @click="deleteSkill(index)">
             {{ index + 1 }}. {{ skill }}
         </li>
     </ul>
