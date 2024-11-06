@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>
+        Exercise
+    </title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<main>
+    <form @submit.prevent>
+        <input type="text" v-model="newTodo"/>
+        <button @click="addTodo">
+            Add
+        </button>
+    </form>
+    <ul v-if="show && todos.length">
+        <li v-for="(todo, index) in todos" :key="index">
+            {{ todo }}
+        </li>
+    </ul>
+    <button @click="show = !show">
+        {{ show ? 'Hide' : 'Show' }}
+    </button>
+</main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
