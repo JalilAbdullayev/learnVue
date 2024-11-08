@@ -1,7 +1,7 @@
 <script>
 export default {
   name: "StudentList",
-  props: ["students"]
+  props: ["name", "phone", "email"]
 };
 </script>
 
@@ -10,8 +10,19 @@ export default {
     My students
   </h2>
   <ul>
-    <li v-for="student in students" :key="student.name">
-      {{ student.name }} - {{ student.phone }}
+    <li>
+      <p>
+        Name:
+      </p>
+      {{ name }}
+      <p>
+        Phone:
+      </p>
+      {{ phone }}
+      <p>
+        Email:
+      </p>
+      {{ email }}
     </li>
   </ul>
 </template>
