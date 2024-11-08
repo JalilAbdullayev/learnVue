@@ -1,7 +1,12 @@
 <script>
 export default {
   name: "StudentList",
-  props: ["name", "phone", "email"]
+  props: ["name", "phone", "email"],
+  data() {
+    return {
+      show: false
+    };
+  }
 };
 </script>
 
@@ -9,16 +14,18 @@ export default {
   <h2>
     My students
   </h2>
-  <ul>
+  {{ name }}
+  <button @click="show = !show">
+    Show data
+  </button>
+  <ul v-if="show">
     <li>
-      <p>
-        Name:
-      </p>
-      {{ name }}
       <p>
         Phone:
       </p>
       {{ phone }}
+    </li>
+    <li>
       <p>
         Email:
       </p>
